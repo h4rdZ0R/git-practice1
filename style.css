@@ -1,0 +1,569 @@
+/* ==========================================
+   ROBOSPHERE - CUSTOM STYLES
+   Версия: 2.0
+   Дата: 26.01.2026
+   ========================================== */
+
+/* ==========================================
+   1. GLOBAL STYLES
+   ========================================== */
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Logo Font */
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+/* CSS Variables */
+:root {
+    --primary-blue: #2563EB;
+    --blue-gradient-start: #2563EB;
+    --blue-gradient-end: #1E40AF;
+}
+
+/* Smooth Transitions */
+a, 
+button:not(.carousel-dot), 
+input, 
+textarea,
+select {
+    transition: all 0.2s ease;
+}
+
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+}
+
+/* ==========================================
+   3. BUTTONS & LINKS
+   ========================================== */
+
+/* Button Hover Effects */
+button:hover,
+a.bg-blue-600:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+nav a:hover {
+    color: #2563EB;
+    transition: color 0.2s ease;
+}
+
+/* Header Button - Yellow Hover */
+header a[href="#request-form"]:hover {
+    color: #FCD34D !important;
+}
+
+/* ==========================================
+   4. ROBOT SECTIONS - HOVER EFFECTS
+   ========================================== */
+
+/* Waiter Robots */
+#waiter-robot-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Cleaner Robots */
+.cleaner-robot-frame img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Info Robots */
+.info-robot-frame img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Loader Robots */
+.loader-robot-frame img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Entertainment Robots */
+.entertainment-robot-frame img:hover {
+    transform: scale(1.05) rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   5. BENEFITS ANIMATIONS
+   ========================================== */
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Waiter Benefits */
+.benefits-list .benefit-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.benefit-item:nth-child(5) { animation-delay: 0.5s; }
+.benefit-item:nth-child(6) { animation-delay: 0.6s; }
+.benefit-item:nth-child(7) { animation-delay: 0.7s; }
+
+/* Cleaner Benefits */
+.cleaner-benefits .benefit-item {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.cleaner-benefits .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.cleaner-benefits .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.cleaner-benefits .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.cleaner-benefits .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Info Benefits */
+.info-benefits .benefit-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.info-benefits .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.info-benefits .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.info-benefits .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.info-benefits .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.info-benefits .benefit-item:nth-child(5) { animation-delay: 0.5s; }
+.info-benefits .benefit-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Loader Benefits */
+.loader-benefits .benefit-item {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.loader-benefits .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.loader-benefits .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.loader-benefits .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.loader-benefits .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.loader-benefits .benefit-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Entertainment Benefits */
+.entertainment-benefits .benefit-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.entertainment-benefits .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.entertainment-benefits .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.entertainment-benefits .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.entertainment-benefits .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.entertainment-benefits .benefit-item:nth-child(5) { animation-delay: 0.5s; }
+.entertainment-benefits .benefit-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* ==========================================
+   6. WHO NEEDS ROBOTS SECTION
+   ========================================== */
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Styling */
+.who-needs-card {
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.who-needs-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.who-needs-card:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Stagger Animation */
+.who-needs-card:nth-child(1) { animation-delay: 0.1s; }
+.who-needs-card:nth-child(2) { animation-delay: 0.2s; }
+.who-needs-card:nth-child(3) { animation-delay: 0.3s; }
+.who-needs-card:nth-child(4) { animation-delay: 0.4s; }
+.who-needs-card:nth-child(5) { animation-delay: 0.5s; }
+.who-needs-card:nth-child(6) { animation-delay: 0.6s; }
+.who-needs-card:nth-child(7) { animation-delay: 0.7s; }
+.who-needs-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Alternative selector for grid */
+.who-needs-robots-grid > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   7. VIDEO SECTION
+   ========================================== */
+
+/* Video Fade In Animation */
+@keyframes videoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Video Slide Sizing */
+.video-slide {
+    width: calc(50% - 12px);
+    min-width: 0;
+    animation: videoFadeIn 0.6s ease-out;
+}
+
+/* Mobile: 1 video per view */
+@media (max-width: 767px) {
+    .video-slide {
+        width: 100%;
+    }
+}
+
+/* Video Container Hover */
+.video-slide > div {
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-slide:hover > div {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Video Title Hover */
+.video-slide p {
+    transition: color 0.3s ease;
+}
+
+.video-slide:hover p {
+    color: #2563EB;
+}
+
+/* Stagger Animation */
+.video-slide:nth-child(1) { animation-delay: 0.1s; }
+.video-slide:nth-child(2) { animation-delay: 0.2s; }
+.video-slide:nth-child(3) { animation-delay: 0.3s; }
+.video-slide:nth-child(4) { animation-delay: 0.4s; }
+.video-slide:nth-child(5) { animation-delay: 0.5s; }
+
+/* Navigation Arrows */
+#video-prev,
+#video-next {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+#video-prev:hover:not(:disabled),
+#video-next:hover:not(:disabled) {
+    background-color: #f3f4f6;
+    transform: translateY(-50%) scale(1.15);
+}
+
+#video-prev:disabled,
+#video-next:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Smooth Slider Animation */
+#video-slider-track {
+    will-change: transform;
+}
+
+/* ==========================================
+   8. CONTACT FORM SECTION
+   ========================================== */
+
+/* Form Fade In Animation */
+@keyframes formFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Parallax */
+#request-form {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Mobile: disable parallax */
+@media (max-width: 768px) {
+    #request-form {
+        background-attachment: scroll;
+    }
+}
+
+/* Form Animation */
+#contact-form {
+    animation: formFadeIn 0.8s ease-out;
+}
+
+/* Input Focus Effects */
+#contact-form input {
+    transition: all 0.3s ease;
+}
+
+#contact-form input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Submit Button Ripple Effect */
+#contact-form button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+#contact-form button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+#contact-form button[type="submit"]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Success Message */
+.form-success {
+    background-color: #10b981;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}
+
+.form-success.show {
+    display: block;
+    animation: formFadeIn 0.5s ease-out;
+}
+
+/* Error Message */
+.form-error {
+    background-color: #ef4444;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+    animation: formFadeIn 0.5s ease-out;
+}
+
+/* ==========================================
+   9. MODAL POPUP
+   ========================================== */
+
+#contact-modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content.scale-95 {
+    transform: scale(0.95);
+}
+
+.modal-content.scale-100 {
+    transform: scale(1);
+}
+
+.modal-content.opacity-0 {
+    opacity: 0;
+}
+
+.modal-content.opacity-100 {
+    opacity: 1;
+}
+
+/* Modal Input Focus */
+#modal-form input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Backdrop Blur */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .modal-content {
+        border-radius: 1.5rem;
+    }
+}
+
+/* ==========================================
+   10. SHINE BUTTON ANIMATION
+   ========================================== */
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.shine-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+.shine-button:hover::before {
+    animation: shine 1.5s infinite;
+}
+
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+
+footer {
+    background-color: #ffffff;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer .social-icon {
+    transition: all 0.3s ease;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+footer a[href^="tel:"] {
+    text-decoration: none;
+}
+
+footer a[href^="tel:"]:hover {
+    text-decoration: underline;
+}
+
+#footer-logo {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#footer-logo:hover {
+    transform: translateY(-2px);
+}
+
+footer .bg-blue-600 {
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+footer .bg-blue-600:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    footer .grid {
+        text-align: center;
+    }
+    
+    footer .social-icon {
+        justify-content: center;
+    }
+}

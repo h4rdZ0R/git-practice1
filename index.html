@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robosphere - Сервисные роботы</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Comfortaa', 'cursive'],
+                        display: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+
+    <!-- ========================================
+         HEADER / NAVIGATION
+    ========================================= -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#main" class="logo-text text-2xl font-black text-gray-900 hover:text-blue-600 transition-colors">
+                        robosphere
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu (Desktop) -->
+                <ul class="hidden md:flex items-center space-x-8 text-gray-700 font-bold text-base">
+                    <li><a href="#main" class="hover:text-blue-600 transition">Главная</a></li>
+                    <li><a href="#robots" class="hover:text-blue-600 transition">Роботы</a></li>
+                    <li><a href="#cases" class="hover:text-blue-600 transition">Кейсы внедрения</a></li>
+                    <li><a href="#contacts" class="hover:text-blue-600 transition">Контакты</a></li>
+                </ul>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#request-form" class="bg-blue-600 hover:bg-blue-700 text-white hover:text-yellow-300 px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                        Оставить заявку
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-4 text-gray-700 font-bold">
+                    <li><a href="#main" class="block hover:text-blue-600">Главная</a></li>
+                    <li><a href="#robots" class="block hover:text-blue-600">Роботы</a></li>
+                    <li><a href="#cases" class="block hover:text-blue-600">Кейсы внедрения</a></li>
+                    <li><a href="#contacts" class="block hover:text-blue-600">Контакты</a></li>
+                    <li><a href="#request-form" class="bg-blue-600 text-white px-6 py-3 rounded-lg inline-block font-medium">Оставить заявку</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
+    <section id="main" class="relative bg-gradient-to-br from-blue-600 to-blue-700 min-h-screen flex items-center overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="text-white space-y-6 lg:space-y-8">
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        Сервисные роботы нового поколения для автоматизации бизнеса и роста прибыли
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg lg:text-xl text-blue-50">
+                        Автоматизируют обслуживание, повышают выручку<br class="hidden sm:block">
+                        и впечатляют гостей - уже с первого дня работы
+                    </p>
+                    
+                    <!-- Features List -->
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-6 h-6 bg-white rounded-sm flex items-center justify-center mt-0.5">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-base sm:text-lg">Притягивают внимание и клиентов</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-6 h-6 bg-white rounded-sm flex items-center justify-center mt-0.5">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-base sm:text-lg">Повышают лояльность и качество сервиса</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-6 h-6 bg-white rounded-sm flex items-center justify-center mt-0.5">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-base sm:text-lg">Интеграция за 1 день</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- CTA Button -->
+                    <div class="pt-4">
+                        <a href="#request-form" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
+                            Оставить заявку
+                        </a>
+                        <p class="mt-4 text-sm text-blue-100">
+                            Пройдите отбор на бесплатный<br>
+                            <span class="font-semibold text-white">48 часовой тест-драйв робота</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Robot Carousel -->
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="relative overflow-hidden bg-white shadow-2xl" style="height: 550px; clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));">
+                        
+                        <!-- Carousel Track -->
+                        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
+                            
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full flex flex-col items-center justify-center p-8">
+                                <div class="relative w-full h-full flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="w-64 h-64 bg-blue-100 rounded-full opacity-30"></div>
+                                    </div>
+                                    <img src="assets/images/Image_1.png" alt="PUDUBOT" class="relative z-10 max-h-96 w-auto object-contain">
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full flex flex-col items-center justify-center p-8">
+                                <div class="relative w-full h-full flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="w-64 h-64 bg-purple-100 rounded-full opacity-30"></div>
+                                    </div>
+                                    <img src="assets/images/Image_2.png" alt="KettyBot" class="relative z-10 max-h-96 w-auto object-contain">
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full flex flex-col items-center justify-center p-8">
+                                <div class="relative w-full h-full flex items-center justify-center">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="w-64 h-64 bg-green-100 rounded-full opacity-30"></div>
+                                    </div>
+                                    <img src="assets/images/Image_3.png" alt="BellaBot" class="relative z-10 max-h-96 w-auto object-contain">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button id="carousel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 backdrop-blur-sm">
+                            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <button id="carousel-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 backdrop-blur-sm">
+                            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Dots Navigation -->
+                    <div class="flex items-center justify-center mt-8 space-x-3">
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white shadow-lg transition-all duration-300" data-index="0"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-index="1"></button>
+                        <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         WAITER ROBOTS SECTION
+    ========================================= -->
+    <section id="robots" class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Роботы-официанты
+            </h2>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Robot Image -->
+                    <div class="relative">
+                        <div class="relative p-1 bg-gradient-to-br from-gray-900 to-gray-700" style="clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));">
+                            <div class="relative bg-white p-8 sm:p-12 lg:p-16" style="clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));">
+                                <img id="waiter-robot-image" src="assets/images/Image_2.png" alt="Робот-официант" class="w-full h-auto mx-auto max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-1">
+                                    Повышают средний чек на 15–25%
+                                </h3>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Гости остаются дольше, заказывают больше
+                                </p>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Возвратность клиентов возрастает на 30–40%
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-1">
+                                    Увеличивают общую выручку на 20% уже в первые месяцы
+                                </h3>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Повышают качество сервиса и снижают нагрузку на персонал
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-1">
+                                    До 50+ упоминаний в соцсетях ежемесячно — бесплатно
+                                </h3>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Роботы создают вау-эффект, ускоряют обслуживание. Команда работает спокойнее, а выручка растёт за счёт вовлечённости и интереса
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-1">
+                                    Окупаемость — от 5 до 9 месяцев
+                                </h3>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Реально подтверждено в кейсах ресторанов и кафе
+                                </p>
+                                <p class="text-gray-600 text-sm sm:text-base">
+                                    Внимание, эмоции, запоминаемость
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="mt-12 lg:mt-16 max-w-5xl mx-auto">
+                    <p class="text-center text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Робот-официант — это не просто замена персоналу. Это маркетинговая машина, которая превращает каждый визит в событие. Он двигается по залу, привлекает взгляды, общается и подаёт блюда — и всё это вызывает удивление, восторг и желание делиться
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-12 text-center">
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-lg font-bold text-lg sm:text-xl transition shadow-lg uppercase">
+                        Записаться на бесплатный тест-драйв
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CLEANER ROBOTS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Роботы-уборщики
+            </h2>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-8 order-2 lg:order-1">
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-xl sm:text-2xl text-gray-900">
+                                    Снижение затрат на уборку до 50%
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Средняя стоимость клининга в Казахстане составляет от 100 до 350 ₸/м². Для ТЦ площадью 5 000 м² это от 500 000 ₸ до 1 750 000 ₸ в месяц. Робот-уборщик позволяет существенно сократить эти расходы
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-xl sm:text-2xl text-gray-900">
+                                    Окупаемость от 6 месяцев
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Инвестиции в робота окупаются за счёт экономии на клининговых услугах и повышении эффективности уборки
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-xl sm:text-2xl text-gray-900">
+                                    Постоянное поддержание чистоты
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Робот обеспечивает стабильное качество уборки, снижая количество жалоб от арендаторов и посетителей
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-xl sm:text-2xl text-gray-900">
+                                    Улучшение имиджа
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Использование робота-уборщика демонстрирует технологичность и заботу о комфорте клиентов
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Robot Image -->
+                    <div class="relative order-1 lg:order-2">
+                        <div class="relative p-1 bg-gradient-to-br from-gray-900 to-gray-700" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                            <div class="relative bg-white p-8 sm:p-12 lg:p-16" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                                <img src="assets/images/Image_3.png" alt="Робот-уборщик" class="w-full h-auto mx-auto max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="mt-12 lg:mt-16 max-w-5xl mx-auto">
+                    <p class="text-center text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Робот-уборщик — это экономия и порядок без усилий. Он работает без перерывов, не болеет, не требует надзора и всегда даёт одинаково высокий результат. Торговый центр становится чище, расходы — ниже,а имидж — современнее. Инвестиция, которая возвращается уже через полгода.
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-12 text-center">
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-lg font-bold text-lg sm:text-xl transition shadow-lg uppercase">
+                        Записаться на бесплатный тест-драйв
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         INFO ROBOTS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Информационные роботы
+            </h2>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Помогают с навигацией и консультацией
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Показывают, где что находится, подсказывают маршруты и помогают быстрее ориентироваться в пространстве
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Снижение нагрузки на сотрудников до 30%
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Посетители получают ответы на частые вопросы без участия персонала
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Дополнительный доход за счёт рекламы
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Робот транслирует промоакции, новинки, предложения — арендаторы платят за продвижение внутри пространства
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Увеличение удовлетворённости гостей на 20–25%
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Быстрая помощь, понятные ответы, интерактивное общение — всё это повышает впечатление от визита
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Robot Image -->
+                    <div class="relative">
+                        <div class="relative p-1 bg-gradient-to-br from-gray-900 to-gray-700" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                            <div class="relative bg-white p-8 sm:p-12 lg:p-16" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                                <img src="assets/images/Image_1.png" alt="Информационный робот" class="w-full h-auto mx-auto max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="mt-12 lg:mt-16 max-w-5xl mx-auto">
+                    <p class="text-center text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Информационный робот — это точка притяжения и умный помощник в одном флаконе. Он отвечает, показывает, помогает — и всё это без очередей и утомления. Ваши гости довольны, сотрудники разгружены, реклама работает, а пространство становится технологичнее.
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-12 text-center">
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-lg font-bold text-lg sm:text-xl transition shadow-lg uppercase">
+                        Записаться на бесплатный тест-драйв
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         LOADER ROBOTS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Роботы погрузчики
+            </h2>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Robot Image -->
+                    <div class="relative">
+                        <div class="relative p-1 bg-gradient-to-br from-gray-900 to-gray-700" style="clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));">
+                            <div class="relative bg-white p-8 sm:p-12 lg:p-16" style="clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));">
+                                <img src="assets/images/Image_2.png" alt="Робот-погрузчик" class="w-full h-auto mx-auto max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Снижение затрат на персонал и технику
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Для обслуживания склада требуется как минимум 2–3 погрузчика стоимостью около 20 млн ₸, а также 2–3 водителя с зарплатой 250 000–400 000 ₸ в месяц
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Непрерывная работа 24/7
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Автономный цикл — без усталости, отпусков, больничных и человеческого фактора. Подходит для круглосуточных и сезонных нагрузок
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    До 99.9% точности перемещений
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Исключены ошибки, повреждения товара и путаница с адресацией. Всё фиксируется в учётной системе в реальном времени
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Интеграция с 1С, WMS и ERP
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Получает задания и отчитывается автоматически, без ручного ввода данных, RFID или сканирования
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Ускорение логистики в 2–3 раза
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Оптимальные маршруты и быстрая обработка
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="mt-12 lg:mt-16 max-w-5xl mx-auto">
+                    <p class="text-center text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Роботизированный погрузчик — это альтернатива дорогостоящей технике и сложному управлению персоналом. Он не ошибается, не устает и всегда работает по графику. Это быстрый способ перевести склад в XXI век и освободить ресурсы для роста, а не рутины. Окупаемость — от 6 до 18 месяцев в зависимости от масштаба задач.
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-12 text-center">
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-lg font-bold text-lg sm:text-xl transition shadow-lg uppercase">
+                        Записаться на бесплатный тест-драйв
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ENTERTAINMENT ROBOTS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Роботы для развлечений
+            </h2>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Создают вау-эффект с первых секунд
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Робот танцует, говорит, мигает, шутит, вовлекает детей и взрослых — он не остаётся без внимания ни на секунду
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Генерируют вирусный контент
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Люди фотографируются, снимают сторис, делятся — бренд или локация становятся объектом обсуждения. Охваты — без вложений в рекламу
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Повышают запоминаемость бренда до 60%
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Эмоциональное вовлечение в разы увеличивает вероятность того, что гость вернётся или расскажет другим
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-4 h-4 bg-black mt-2"></div>
+                                <h3 class="font-bold text-lg sm:text-xl text-gray-900">
+                                    Гибкость под любое событие
+                                </h3>
+                            </div>
+                            <p class="text-gray-600 text-sm sm:text-base ml-7">
+                                Новый год, Halloween, запуск продукта, корпоратив — робот может «переодеться» тематически и усилить атмосферу
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Robot Image -->
+                    <div class="relative">
+                        <div class="relative p-1 bg-gradient-to-br from-gray-900 to-gray-700" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                            <div class="relative bg-white p-8 sm:p-12 lg:p-16" style="clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);">
+                                <img src="assets/images/Image_1.png" alt="Робот для развлечений" class="w-full h-auto mx-auto max-w-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="mt-12 lg:mt-16 max-w-5xl mx-auto">
+                    <p class="text-center text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Инструмент эмоционального маркетинга. Он превращает скучную точку в живое пространство, собирает лайки и гостей, делает бренд ближе, понятнее и веселее. И всё это — без усталости и капризов.
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-12 text-center">
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-lg font-bold text-lg sm:text-xl transition shadow-lg uppercase">
+                        Записаться на бесплатный тест-драйв
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         WHO NEEDS ROBOTS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-20">
+                Кому подойдут роботы
+            </h2>
+            
+            <div class="max-w-7xl mx-auto mb-6">
+                <img src="assets/images/Frame_53.png" alt="Отели, Рестораны, Торговые центры" class="w-full h-auto">
+            </div>
+            
+            <div class="max-w-7xl mx-auto mb-6">
+                <img src="assets/images/Frame_54.png" alt="Клиники, Аэропорты, Склады" class="w-full h-auto">
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <img src="assets/images/Frame_55.png" alt="Выставки, Банки" class="w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROBLEMS & SOLUTIONS SECTION
+    ========================================= -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+                Какие задачи наши роботы<br class="hidden sm:block">
+                уже успешно решили
+            </h2>
+            
+            <div class="max-w-6xl mx-auto space-y-4">
+                
+                <!-- Row 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Персонал перегружен рутиной, общение с клиентами стало формальным
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Инфо-робот взял на себя консультации, маршруты, вопросы. Сервис стал живым, оценки в 2Gis выросли до 4,8.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Посетителям было скучно, локация не цыпляла, выручка стояла
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Развлекательный робот стал поводом для фото, видео и сарафана. рафик вырос на 22%, средний чек — на 15%
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Уборка в ТРЦ стоила 1,7 млн ₸ в месяц и не давала идеальной чистоты
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Робот заменил двух уборщиков и аренду техники, сэкономив 1,2 млн ₸ в месяц. Жалобы исчезли.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Официанты не справлялись, сервис проседал в часы пик
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Робот разгрузил команду на 40%, повысил глубину чека на 17%, заполняемость на 27%,возвращаемость на 23% и улучшил
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 5 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Склад тратил миллионы на технику и персонал, работал с ошибками
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Один робот заменил три погрузчика и до 3 сотрудников, снизив издержки на 1,3 млн ₸ в месяц и устранив потери.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 6 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Рекламные площади в ТЦ простаивали, аренда не продавалась
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Аниматор-робот стал магнитом для детей, увеличив длительность визита и возвратность семейных гостей.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 7 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            Детская аудитория не вовлекалась, семьи не задерживались
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Робот с экраном дал арендаторам новый формат рекламы, увеличив интерес и заполнил 2 пустующих локации
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Row 8 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-red-600 text-2xl">✕</div>
+                        <p class="text-gray-700 text-sm sm:text-base">
+                            На ресепшне клиники образовывались очереди, администраторы не справлялись.
+                        </p>
+                    </div>
+                    <div class="bg-blue-600 p-6 rounded-lg shadow-md flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-white text-2xl">✓</div>
+                        <p class="text-white text-sm sm:text-base">
+                            Робот встречает, регистрирует, направляет пациентов. Очередей нет, первый контакт стал вау-эффектом. Повышение посещаемости на 19%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         VIDEO SECTION
+    ========================================= -->
+    <section id="cases" class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 lg:mb-16">
+                Видео с нашими роботами
+            </h2>
+            
+            <div class="relative max-w-7xl mx-auto">
+                <div class="overflow-hidden">
+                    <div id="video-slider-track" class="flex transition-transform duration-500 ease-in-out gap-6">
+                        
+                        <!-- Video 1 -->
+                        <div class="video-slide flex-shrink-0">
+                            <div class="bg-black rounded-2xl overflow-hidden relative shadow-xl border-4 border-gray-900" style="padding-bottom: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/X9zFFisoo-w" title="PUDU MT1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center text-gray-900 font-bold text-lg sm:text-xl mt-6">
+                                PUDU MT1 - Робот уборщик
+                            </p>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div class="video-slide flex-shrink-0">
+                            <div class="bg-black rounded-2xl overflow-hidden relative shadow-xl border-4 border-gray-900" style="padding-bottom: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/zSM2NpbEoYM" title="PUDU T300" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center text-gray-900 font-bold text-lg sm:text-xl mt-6">
+                                PUDU T300 - Робот погрузчик
+                            </p>
+                        </div>
+                        
+                        <!-- Video 3 -->
+                        <div class="video-slide flex-shrink-0">
+                            <div class="bg-black rounded-2xl overflow-hidden relative shadow-xl border-4 border-gray-900" style="padding-bottom: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/20UaJPqg_pQ" title="PuduBot 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center text-gray-900 font-bold text-lg sm:text-xl mt-6">
+                                PuduBot 2 - Робот официант
+                            </p>
+                        </div>
+                        
+                        <!-- Video 4 -->
+                        <div class="video-slide flex-shrink-0">
+                            <div class="bg-black rounded-2xl overflow-hidden relative shadow-xl border-4 border-gray-900" style="padding-bottom: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/2CKVWj2LDEI" title="KettyBot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center text-gray-900 font-bold text-lg sm:text-xl mt-6">
+                                KettyBot - Информационный робот
+                            </p>
+                        </div>
+                        
+                        <!-- Video 5 -->
+                        <div class="video-slide flex-shrink-0">
+                            <div class="bg-black rounded-2xl overflow-hidden relative shadow-xl border-4 border-gray-900" style="padding-bottom: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/rmN6_dDettc" title="BellaBot Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center text-gray-900 font-bold text-lg sm:text-xl mt-6">
+                                BellaBot Pro - Робот для ресторанов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button id="video-prev" class="absolute -left-6 lg:-left-20 top-1/2 -translate-y-1/2 w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full shadow-2xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all z-20 border-2 border-gray-200">
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <button id="video-next" class="absolute -right-6 lg:-right-20 top-1/2 -translate-y-1/2 w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full shadow-2xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all z-20 border-2 border-gray-200">
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT FORM SECTION
+    ========================================= -->
+    <section id="partner-form" class="relative min-h-screen flex items-center justify-center py-16 lg:py-24 overflow-hidden">
+        
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/sekchya11.png" alt="Robot Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto">
+                
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-8 lg:mb-12">
+                    Станьте официальным поставщиком наших роботов
+                </h2>
+                
+                <!-- Form -->
+                <form id="partner-form-main" action="https://formsubmit.co/nur.baimagambet@gmail.com" method="POST" class="space-y-6">
+                    
+                    <input type="hidden" name="_subject" value="Новая заявка с Robosphere - Партнёр">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://robo-sphere.kz/thank-you.html">
+                    
+                    <input type="email" name="email" placeholder="Электронная почта" required class="w-full px-6 py-4 bg-white border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors">
+                    
+                    <input type="tel" name="phone" placeholder="Контакты для связи" required class="w-full px-6 py-4 bg-white border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors">
+                    
+                    <input type="text" name="name" placeholder="ФИО" required class="w-full px-6 py-4 bg-white border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors">
+                    
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-8 py-5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg uppercase">
+                        Отправить
+                    </button>
+                </form>
+                
+                <!-- Description -->
+                <div class="mt-10 lg:mt-12">
+                    <p class="text-white text-center text-sm sm:text-base lg:text-lg leading-relaxed">
+                        Мы открываем уникальную возможность менять рынок! Наши роботы помогают компаниям повышать выручку и снижать расходы.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MODAL POPUP
+    ========================================= -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 backdrop-blur-sm">
+        <div class="modal-content bg-white max-w-2xl w-full mx-4 transform scale-95 opacity-0 transition-all duration-500 overflow-hidden" style="border-radius: 2rem;">
+            
+            <!-- Close Button -->
+            <button id="modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Robot Image -->
+            <div class="relative w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                <img src="assets/images/feedback3.png" alt="Robot" class="absolute inset-0 w-full h-full object-cover object-center scale-110">
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-8 sm:p-12">
+                
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-3">
+                    Мы свяжемся с Вами!
+                </h2>
+                
+                <p class="text-gray-600 text-center mb-8">
+                    Оставьте свои контакты и мы перезвоним в течение рабочего дня
+                </p>
+                
+                <!-- Form -->
+                <form id="modal-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" id="modal-name" name="name" placeholder="Имя" required class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors">
+                        
+                        <input type="tel" id="modal-phone" name="phone" placeholder="Номер телефона" required class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors">
+                    </div>
+                    
+                    <button type="submit" class="shine-button w-full bg-black hover:bg-gray-800 text-white font-bold text-lg px-8 py-5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg relative overflow-hidden">
+                        <span class="relative z-10">Отправить</span>
+                    </button>
+                    
+                    <p class="text-xs text-gray-500 text-center mt-4">
+                        *Отправляя свои данные Вы даете согласие на прием и обработку персональных данных
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer id="contacts" class="bg-white border-t-2 border-gray-200 py-8 lg:py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
+                
+                <!-- Column 1: Logo + Contacts -->
+                <div class="space-y-4">
+                    <a href="#main" id="footer-logo" class="logo-text inline-block text-2xl font-bold text-gray-900 hover:text-blue-600 transition">
+                        robosphere
+                    </a>
+                    
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Контакты:</h3>
+                        <div class="space-y-2 text-gray-700">
+                            <a href="tel:+77073603566" class="block hover:text-blue-600 transition">+7 707 360 3566</a>
+                            <a href="tel:+77010311282" class="block hover:text-blue-600 transition">+7 701 031 1282</a>
+                            <a href="tel:+77022932747" class="block hover:text-blue-600 transition">+7 702 293 2747</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Address -->
+                <div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">Наш адрес:</h3>
+                    <address class="not-italic text-gray-700 space-y-1">
+                        <p>Республика Казахстан</p>
+                        <a href="https://go.2gis.com/i5D7Q" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 hover:underline font-semibold transition block">
+                            Проспект Туран, 19/1, Z05G9D3,<br>
+                            Астана, Нура район
+                        </a>
+                    </address>
+                </div>
+                
+                <!-- Column 3: Social + CTA -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-4">Остались вопросы?</h3>
+                        
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-3 mb-4">
+                            <a href="https://instagram.com/yourcompany" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-blue-400 hover:bg-blue-500 flex items-center justify-center transition-all transform hover:scale-110">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://wa.me/77714162037?text=Здравствуйте! Меня интересует бесплатный тест-драйв робота" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center transition-all transform hover:scale-110">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </a>
+                            
+                            <a href="https://t.me/+77714162037" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 flex items-center justify-center transition-all transform hover:scale-110">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="#request-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg text-center w-full sm:w-auto">
+                        Получить консультацию
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Privacy Policy -->
+            <div class="mt-8 lg:mt-12 pt-6 border-t border-gray-200">
+                <div class="text-center">
+                    <a href="policy.html" class="text-gray-600 hover:text-blue-600 text-sm transition">
+                        *Политика конфиденциальности
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
